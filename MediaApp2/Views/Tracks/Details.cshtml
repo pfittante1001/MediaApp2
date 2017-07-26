@@ -1,0 +1,42 @@
+﻿@model MediaApp2.Models.Tracks
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tracks</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Albums.AlbumName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Albums.AlbumName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrackNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrackNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrackName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrackName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
